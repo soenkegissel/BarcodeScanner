@@ -257,7 +257,7 @@ public final class CameraViewController: UIViewController {
     let output = AVCaptureMetadataOutput()
     captureSession.addOutput(output)
     output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-    output.metadataObjectTypes = metadata
+    output.metadataObjectTypes = output.availableMetadataObjectTypes
     videoPreviewLayer?.session = captureSession
 
     view.setNeedsLayout()
