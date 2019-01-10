@@ -324,7 +324,7 @@ extension BarcodeScannerViewController: CameraViewControllerDelegate {
             else {
                 try queue.sync {
                     if(!toastLock) {
-                        showToast(duration: 3.0, message: "Wrong barcode type")
+                        showToast(duration: 3.0, message: "Wrong barcode")
                         toastLock = true
                         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
                             self.toastLock = false
