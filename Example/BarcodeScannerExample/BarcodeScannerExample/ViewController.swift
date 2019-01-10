@@ -1,5 +1,6 @@
 import UIKit
 import BarcodeScanner
+import AVFoundation
 
 final class ViewController: UIViewController {
   @IBOutlet var presentScannerButton: UIButton!
@@ -22,6 +23,10 @@ final class ViewController: UIViewController {
     viewController.codeDelegate = self
     viewController.errorDelegate = self
     viewController.dismissalDelegate = self
+    
+    viewController.metadata = []
+    viewController.metadata.append(AVMetadataObject.ObjectType.qr)
+    
     return viewController
   }
 }
