@@ -32,7 +32,7 @@ public protocol BarcodeScannerDismissalDelegate: class {
  - Not found error message
  */
 open class BarcodeScannerViewController: UIViewController {
-    private static let footerHeight: CGFloat = 75
+    private static let footerHeight: CGFloat = 0
     private let queue = DispatchQueue(label: "label")
     private var toastLock : Bool = false
     // MARK: - Public properties
