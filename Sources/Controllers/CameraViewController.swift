@@ -173,7 +173,7 @@ public final class CameraViewController: UIViewController {
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(appWillEnterForeground),
-      name: UIApplication.willEnterForegroundNotification,
+      name: NSNotification.Name.UIApplicationWillEnterForeground,
       object: nil
     )
   }
