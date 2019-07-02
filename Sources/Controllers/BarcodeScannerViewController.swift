@@ -304,7 +304,7 @@ extension BarcodeScannerViewController: CameraViewControllerDelegate {
     
     func cameraViewControllerDidTapSettingsButton(_ controller: CameraViewController) {
         DispatchQueue.main.async {
-            if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+            if let settingsURL = URL(string: UIApplicationOpenSettingsURLString) {
                 UIApplication.shared.openURL(settingsURL)
             }
         }
